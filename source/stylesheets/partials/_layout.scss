@@ -1,29 +1,31 @@
-#main {
-    @include outer-container;
+body {
+  @include background($plexus-blue);
 }
 
-ol {
-  font-size: 1em;
-  font-weight: 500;
 
-  li {
-    margin: .5em 0;
+.wrapper, #main {
+  @include outer-container;
 
-    span {
-      display: inline-block;
+  .content {
+    @include span-columns(10);
+    @include shift(1);
+  }
 
-      &:before {
-        content: '/';
-        margin: 0 .3em;
-      }
-    }
+  .primary {
+    @include span-columns(8);
+  }
+
+  .secondary {
+    @include span-columns(4);
   }
 }
 
-.large-column {
-  @include span-columns(8 of 12);
-}
+footer {
+  @include outer-container;
+  padding-bottom: 2em;
 
-.small-column {
-  @include span-columns(4 of 12);
+  .content {
+    @include span-columns(10);
+    @include shift(1);
+  }
 }

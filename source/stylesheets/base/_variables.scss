@@ -1,6 +1,6 @@
 // Typography
 $base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$heading-font-family: 'Roboto Slab', sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -16,13 +16,15 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
+$blue: #0800a9;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$plexus-blue: #00c3b6;
+$dark-plexus: #005550;
 
 // Font Colors
-$base-background-color: #fff;
+$base-background-color: $plexus-blue;
 $base-font-color: $dark-gray;
 $action-color: $blue;
 

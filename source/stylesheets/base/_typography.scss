@@ -13,13 +13,16 @@ h3,
 h4,
 h5,
 h6 {
+  color: $blue;
   font-family: $heading-font-family;
   font-size: $base-font-size;
+  font-weight: 400;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
 p {
+  color: #fff;
   margin: 0 0 $small-spacing;
 }
 
@@ -52,4 +55,43 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+
+/********************************************************
+
+CUSTOM STYLES
+
+********************************************************/
+.header {
+  h1 {
+    font-size: $base-font-size * 3;
+    font-weight: 300;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    color: #fff;
+    padding-bottom: 4em;
+  }
+
+  .primary {
+    border-left: 4px solid #fff;
+  }
+}
+
+article.secondary {
+  border-top: 1px solid #a1e3dc;
+  padding-top: 1em;
+}
+
+
+/********************************************************
+FOOTER
+********************************************************/
+footer {
+  h1, h2, h3, h4, h5, h6 {
+    color: $plexus-blue;
+    font-weight: 400;
+  }
 }
