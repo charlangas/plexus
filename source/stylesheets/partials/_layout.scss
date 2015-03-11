@@ -1,5 +1,8 @@
 body {
-  @include background($plexus-blue);
+  background-color: $plexus-blue;
+  @include background-image(url("/images/background_pattern1.svg"));
+  background-position: top left;
+  background-repeat: no-repeat;
 }
 
 
@@ -15,8 +18,22 @@ body {
     @include span-columns(8);
   }
 
+  .primary.header.main {
+    border-left: 5px solid #fff;
+    padding-left: 3em;
+    margin-bottom: 10em;
+  }
+
   .secondary {
     @include span-columns(4);
+
+    .icon {
+      @include span-columns(3);
+    }
+
+    .blurb {
+      @include span-columns(9);
+    }
   }
 }
 
