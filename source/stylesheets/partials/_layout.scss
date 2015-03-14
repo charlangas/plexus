@@ -46,3 +46,33 @@ footer {
     @include shift(1);
   }
 }
+
+// MAPS
+
+#map_canvas {
+  height: 500px;
+  width: 100%;
+  margin-bottom: -10em;
+  margin-top: 4em;
+}
+
+#map_canvas img {
+  max-width: none;
+// to prevent UI control bug
+}
+
+#map_canvas .content {
+  padding: 0 0.5em 0 0.5em;
+}
+
+#map_canvas .firstHeading {
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#map_canvas #bodyContent p {
+  font-size: 1em;
+  margin: 0;
+}

@@ -1,0 +1,108 @@
+<div class="wrapper secondary-page">
+
+  <section class="content">
+    <div class="secondary header">
+      <h1>Contáctanos</h1>
+    </div>
+
+    <div class="primary main">
+      <p>Somos un equipo de profesionales de la salud altamente capacitados en el tratamiento del estrés y las enfermedades asociadas a éste, que trabaja de forma interdisciplinar para ofrecer un tratamiento a la medida de las necesidades específicas de nuestros pacientes y sus familias.</p>
+    </div>
+  </section>
+
+</div>
+
+<div id="map_canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(20.677595, -103.37868),
+        mapCenter = new google.maps.LatLng(20.677595, -103.37868),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 18,
+          scrollwheel: false,
+          draggable: true,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Clínica Plexus</h1>'+
+          '<div id="bodyContent"'+
+          '<p>Estrés, Salud Integra, y Cuidados Paliativos</p>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Clínica Plexus'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#00ac9f" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#00ac9f" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "color": "#2dccc1" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "color": "#00b6a5" }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      { "color": "#005550" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "poi",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  }
+]
+);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
+</script>
+

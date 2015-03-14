@@ -64,9 +64,17 @@ configure :build do
   # Enable cache buster
   # activate :asset_hash
 
-  # Use relative URLs
-  # activate :relative_assets
+  Use relative URLs
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+helpers do
+  def nav_link(link_text, url, options = {})
+    options[:class] ||= ""
+    options[:class] << "active" if url == current_page.url
+    link_to(link_text, url, options)
+  end
 end

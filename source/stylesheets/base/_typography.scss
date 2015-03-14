@@ -65,14 +65,14 @@ CUSTOM STYLES
 ********************************************************/
 .header {
   h1 {
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 2.9;
     font-weight: 300;
     margin-bottom: 0.25em;
   }
 
   p {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 0em;
     padding-bottom: 0.5em;
   }
@@ -85,6 +85,38 @@ CUSTOM STYLES
 article.secondary {
   border-top: 1px solid #a1e3dc;
   padding-top: 1em;
+}
+
+.secondary-page {
+  .primary {
+    p {
+      border-bottom: 1px solid #a1e3dc;
+      font-size: 1.3em;
+      padding-bottom: 2em;
+    }
+  }
+}
+
+
+/********************************************************
+STAFF
+********************************************************/
+.staff {
+
+  .staff-member {
+    padding-top: 1em;
+
+    p {
+      font-size: 1em;
+    }
+
+    img {
+      border-radius: 50%;
+      float: left;
+      height: 6em;
+      margin-right: 2em;
+    }
+  }
 }
 
 

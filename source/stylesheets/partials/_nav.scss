@@ -20,7 +20,7 @@ nav {
         text-decoration: none;
       }
 
-      a:hover {
+      a:hover, .active {
         border-bottom: 3px solid $blue;
         color: #fff;
       }
