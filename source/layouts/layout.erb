@@ -13,6 +13,16 @@
   rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
+
+    <style>
+      ::selection {
+        background: #00796c; /* Safari */
+      }
+
+      ::-moz-selection {
+        background: #00796c; /* Firefox */
+      }
+    </style>
   </head>
 
   <body class="<%= page_classes %>">

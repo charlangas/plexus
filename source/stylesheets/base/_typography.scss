@@ -12,7 +12,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, .address-category {
   color: $blue;
   font-family: $heading-font-family;
   font-size: $base-font-size;
@@ -63,6 +63,11 @@ picture {
 CUSTOM STYLES
 
 ********************************************************/
+.address-category {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .header {
   h1 {
     font-size: $base-font-size * 2.9;
